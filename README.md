@@ -1,155 +1,63 @@
-# WebGoat: A deliberately insecure Web Application
+Definición de la aplicación WebGoat
+WebGoat es una aplicación web deliberadamente insegura desarrollada por OWASP para que los estudiantes y profesionales de la seguridad puedan practicar la identificación y explotación de vulnerabilidades comunes en aplicaciones web.
+WebGoat está escrita en Java y contiene una variedad de vulnerabilidades, como:
+•	Inyección SQL
+•	Cross-site scripting (XSS)
+•	Cross-site request forgery (CSRF)
+•	Inclusión de archivos locales (LFI)
+•	Ejecución remota de código (RCE)
+La aplicación se divide en lecciones, cada una de las cuales se centra en un tipo específico de vulnerabilidad. Las lecciones incluyen explicaciones detalladas de la vulnerabilidad, instrucciones sobre cómo explotarla y consejos sobre cómo prevenirla.
+WebGoat es una herramienta valiosa para cualquier persona que quiera aprender sobre seguridad web. Es una forma segura y práctica de aprender a identificar y explotar vulnerabilidades, lo que puede ayudar a mejorar las habilidades de seguridad de cualquier persona.
+Cómo ejecutar WebGoat
+WebGoat se puede ejecutar de varias maneras:
+•	En un servidor local: Puedes descargar la aplicación WebGoat desde el sitio web de OWASP e instalarla en tu propio servidor.
+•	En un entorno virtual: Puedes utilizar una máquina virtual para ejecutar WebGoat en un entorno aislado.
+•	En un servicio de alojamiento web en la nube: Puedes utilizar un servicio de alojamiento web en la nube como Amazon Web Services (AWS) o Google Cloud Platform (GCP) para ejecutar WebGoat.
 
-[![Build](https://github.com/WebGoat/WebGoat/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/WebGoat/WebGoat/actions/workflows/build.yml)
-[![java-jdk](https://img.shields.io/badge/java%20jdk-17-green.svg)](https://jdk.java.net/)
-[![OWASP Labs](https://img.shields.io/badge/OWASP-Lab%20project-f7b73c.svg)](https://owasp.org/projects/)
-[![GitHub release](https://img.shields.io/github/release/WebGoat/WebGoat.svg)](https://github.com/WebGoat/WebGoat/releases/latest)
-[![Gitter](https://badges.gitter.im/OWASPWebGoat/community.svg)](https://gitter.im/OWASPWebGoat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Discussions](https://img.shields.io/github/discussions/WebGoat/WebGoat)](https://github.com/WebGoat/WebGoat/discussions)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+Consideraciones de seguridad en el diseño de la aplicación WebGoat
+WebGoat se ha diseñado con las siguientes consideraciones de seguridad:
+•	Autenticación y autorización: WebGoat utiliza un sistema de autenticación y autorización para controlar quién puede acceder a la aplicación y qué recursos pueden utilizar.
+•	Validación de entrada: WebGoat valida toda la entrada del usuario para evitar ataques de inyección y otros tipos de ataques.
+•	Codificación de salida: WebGoat codifica la salida para evitar ataques de scripting entre sitios (XSS).
+•	Protección contra CSRF: WebGoat utiliza un token CSRF para proteger contra ataques de falsificación de solicitud entre sitios.
+•	Registro y auditoría: WebGoat registra todas las actividades del usuario para facilitar la investigación de incidentes de seguridad.
+•	Actualizaciones de seguridad: WebGoat se actualiza regularmente para corregir vulnerabilidades de seguridad.
+Además de estas consideraciones de seguridad generales, WebGoat también incluye una serie de características de seguridad específicas para cada tipo de vulnerabilidad.
+Por ejemplo:
+•	Para prevenir ataques de inyección SQL: WebGoat utiliza parámetros enlazados y consultas preparadas.
+•	Para prevenir ataques XSS: WebGoat codifica la salida y utiliza una lista de permitidos de etiquetas HTML.
+•	Para prevenir ataques CSRF: WebGoat utiliza un token CSRF.
+WebGoat es una herramienta valiosa para aprender sobre seguridad web. Al comprender las vulnerabilidades de seguridad que se encuentran en WebGoat, puede aprender cómo proteger sus propias aplicaciones web de ataques similares.
 
-# Introduction
+Pasos para crear la aplicación WebGoat siguiendo el SDLC
+Planificación:
+1.	Definir los objetivos de la aplicación: El objetivo de WebGoat es ser una aplicación web deliberadamente insegura que ayude a los estudiantes y profesionales de la seguridad a aprender sobre las vulnerabilidades comunes en aplicaciones web.
+2.	Identificar las necesidades de los usuarios: Los usuarios de WebGoat son estudiantes y profesionales de la seguridad que quieren aprender a identificar y explotar vulnerabilidades en aplicaciones web.
+3.	Crear un plan de proyecto: El plan de proyecto debe definir el alcance, el calendario, el presupuesto y los recursos necesarios para desarrollar WebGoat.
+Análisis:
+1.	Recopilar y analizar los requisitos de la aplicación: Los requisitos de la aplicación incluyen las funcionalidades que debe tener WebGoat, las vulnerabilidades que debe contener y las herramientas que debe proporcionar.
+2.	Crear casos de uso: Los casos de uso describen cómo los usuarios utilizarán WebGoat para aprender sobre las vulnerabilidades.
+3.	Definir la arquitectura de la aplicación: La arquitectura de la aplicación debe ser escalable y segura.
+Diseño:
+1.	Diseñar la interfaz de usuario: La interfaz de usuario debe ser fácil de usar y comprensible.
+2.	Diseñar la base de datos: La base de datos debe almacenar los datos de la aplicación de forma segura y eficiente.
+3.	Diseñar la arquitectura de la aplicación: La arquitectura de la aplicación debe ser modular y fácil de mantener.
+Desarrollo:
+1.	Implementar la aplicación: La aplicación se puede implementar utilizando una variedad de lenguajes de programación y frameworks.
+2.	Probar la aplicación: La aplicación debe probarse para asegurar que cumple con los requisitos y que es libre de errores.
+3.	Corregir errores: Los errores que se encuentren durante las pruebas deben ser corregidos.
+Pruebas:
+1.	Pruebas unitarias: Las pruebas unitarias se utilizan para probar las unidades individuales de código.
+2.	Pruebas de integración: Las pruebas de integración se utilizan para probar cómo las diferentes unidades de código interactúan entre sí.
+3.	Pruebas de aceptación: Las pruebas de aceptación se utilizan para asegurar que la aplicación cumple con los requisitos de los usuarios.
+4.	Pruebas de rendimiento: Las pruebas de rendimiento se utilizan para medir el rendimiento de la aplicación.
+Implementación:
+1.	Implementar la aplicación en producción: La aplicación se puede implementar en un servidor web.
+2.	Capacitar a los usuarios: Los usuarios deben ser capacitados sobre cómo utilizar la aplicación.
+Mantenimiento:
+1.	Corregir errores: Los errores que se encuentren en la aplicación deben ser corregidos.
+2.	Realizar mejoras: La aplicación se puede mejorar agregando nuevas funcionalidades o corrigiendo vulnerabilidades.
+Es importante resaltar de nuevo que el SDLC es un proceso iterativo, por tanto, los diferentes pasos del SDLC se pueden repetir varias veces hasta que la aplicación esté completa.
 
-WebGoat is a deliberately insecure web application maintained by [OWASP](http://www.owasp.org/) designed to teach web
-application security lessons.
 
-This program is a demonstration of common server-side application flaws. The
-exercises are intended to be used by people to learn about application security and
-penetration testing techniques.
-
-**WARNING 1:** *While running this program your machine will be extremely
-vulnerable to attack. You should disconnect from the Internet while using
-this program.*  WebGoat's default configuration binds to localhost to minimize
-the exposure.
-
-**WARNING 2:** *This program is for educational purposes only. If you attempt
-these techniques without authorization, you are very likely to get caught. If
-you are caught engaging in unauthorized hacking, most companies will fire you.
-Claiming that you were doing security research will not work as that is the
-first thing that all hackers claim.*
-
-![WebGoat](docs/images/webgoat.png)
-
-# Installation instructions:
-
-For more details check [the Contribution guide](/CONTRIBUTING.md)
-
-## 1. Run using Docker
-
-Already have a browser and ZAP and/or Burp installed on your machine in this case you can run the WebGoat image directly using Docker.
-
-Every release is also published on [DockerHub](https://hub.docker.com/r/webgoat/webgoat).
-
-```shell
-docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 webgoat/webgoat
-```
-
-For some lessons you need the container run in the same timezone. For this you can set the TZ environment variable.
-E.g.
-
-```shell
-docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=America/Boise webgoat/webgoat
-```
-
-If you want to use OWASP ZAP or another proxy, you can no longer use 127.0.0.1 or localhost. but
-you can use custom host entries. For example:
-
-```shell
-127.0.0.1 www.webgoat.local www.webwolf.local
-```
-
-Then you can run the container with:
-
-```shell
-docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e WEBGOAT_HOST=www.webgoat.local -e WEBWOLF_HOST=www.webwolf.local -e TZ=America/Boise webgoat/webgoat
-```
-
-Then visit http://www.webgoat.local:8080/WebGoat/ and http://www.webwolf.local:9090/WebWolf/
-
-## 2. Run using Docker with complete Linux Desktop
-
-Instead of installing tools locally we have a complete Docker image based on running a desktop in your browser. This way you only have to run a Docker image which will give you the best user experience.
-
-```shell
-docker run -p 127.0.0.1:3000:3000 webgoat/webgoat-desktop
-```
-
-## 3. Standalone
-
-Download the latest WebGoat release from [https://github.com/WebGoat/WebGoat/releases](https://github.com/WebGoat/WebGoat/releases)
-
-```shell
-export TZ=Europe/Amsterdam # or your timezone
-java -Dfile.encoding=UTF-8 -jar webgoat-2023.5.jar
-```
-
-Click the link in the log to start WebGoat.
-
-## 4. Run from the sources
-
-### Prerequisites:
-
-* Java 17 or 21
-* Your favorite IDE
-* Git, or Git support in your IDE
-
-Open a command shell/window:
-
-```Shell
-git clone git@github.com:WebGoat/WebGoat.git
-```
-
-Now let's start by compiling the project.
-
-```Shell
-cd WebGoat
-git checkout <<branch_name>>
-# On Linux/Mac:
-./mvnw clean install
-
-# On Windows:
-./mvnw.cmd clean install
-
-# Using docker or podman, you can than build the container locally
-docker build -f Dockerfile . -t webgoat/webgoat
-```
-
-Now we are ready to run the project. WebGoat is using Spring Boot.
-
-```Shell
-# On Linux/Mac:
-./mvnw spring-boot:run
-# On Windows:
-./mvnw.cmd spring-boot:run
-
-```
-
-... you should be running WebGoat on http://localhost:8080/WebGoat momentarily.
-
-Note: The above link will redirect you to login page if you are not logged in. LogIn/Create account to proceed.
-
-To change the IP address add the following variable to the `WebGoat/webgoat-container/src/main/resources/application.properties` file:
-
-```
-server.address=x.x.x.x
-```
-
-## 4. Run with custom menu
-
-For specialist only. There is a way to set up WebGoat with a personalized menu. You can leave out some menu categories or individual lessons by setting certain environment variables.
-
-For instance running as a jar on a Linux/macOS it will look like this:
-
-```Shell
-export TZ=Europe/Amsterdam # or your timezone
-export EXCLUDE_CATEGORIES="CLIENT_SIDE,GENERAL,CHALLENGE"
-export EXCLUDE_LESSONS="SqlInjectionAdvanced,SqlInjectionMitigations"
-java -jar target/webgoat-2023.6-SNAPSHOT.jar
-```
-
-Or in a docker run it would (once this version is pushed into docker hub) look like this:
-
-```Shell
-docker run -d -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e EXCLUDE_CATEGORIES="CLIENT_SIDE,GENERAL,CHALLENGE" -e EXCLUDE_LESSONS="SqlInjectionAdvanced,SqlInjectionMitigations" webgoat/webgoat
-```
 
